@@ -1,6 +1,6 @@
-# pg_render
+# arch_pg_render
 
-Render engine extension for PostgreSQL.
+Render engine extension for bare metal PostgreSQL.
 
 ```sql
 -- PostgreSQL extension
