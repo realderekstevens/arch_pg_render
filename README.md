@@ -7,7 +7,7 @@ Render engine extension for bare metal PostgreSQL 15 on Arch Linux.
 pacman -Syu git
 sudo useradd -m -G wheel user
 sudo EDITOR=vim visudo
-Find the and uncomment wheel group without password line 108
+(Find the and uncomment wheel group without password line 108
 passwd user
 confirm password
 su - user
@@ -63,7 +63,7 @@ select render(
 $$;
 ```
 
-->
+# Another Example
 
 ```html
 # HTTP GET /index
