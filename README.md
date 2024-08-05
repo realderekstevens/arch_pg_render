@@ -32,7 +32,8 @@ chown postgres /var/lib/postgres/.psql_history
 # 2.) Copy the MakeFile, arch_pg_render--1.0, arch_pg_render.control
 ```bash
 yay -Syu git
-git clone https://github.com/realderekstevens/arch_pg_render /usr/share/postgresql/extension/
+cd ~/home/user
+git clone https://github.com/realderekstevens/arch_pg_render
 sudo cp arch_pg_render--1.0.sql /usr/share/postgresql/extension
 sudo cp arch_pg_render.control /usr/share/postgresql/extension
 ```
@@ -41,7 +42,7 @@ sudo cp arch_pg_render.control /usr/share/postgresql/extension
 ```bash
 su - postgres
 psql
-create extension pg_render;
+create extension arch_pg_render;
 ```
 
 # 
@@ -179,7 +180,7 @@ Made with
 # Sql.1
 
 -- PostgREST setup
-create extension pg_render;
+create extension arch_pg_render;
 create domain "text/html" as text;
 create role anon nologin;
 create role writer nologin;
