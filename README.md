@@ -29,15 +29,22 @@ wq
 chown postgres /var/lib/postgres/.psql_history
 ```
 
-# 2.) enable the extension In PostgreSQL
+# 2.) Copy the MakeFile, arch_pg_render--1.0, arch_pg_render.control
 ```bash
+cp arch_pg _render--1.0 /usr/share/postgresql/extension/
+cp arch_pg_render.control /usr/share/postgresql/extension/
+su - postgres
+psql
+```
+
+# 3.) enable the extension In PostgreSQL
+```bash
+su - postgres
+psql
 create extension pg_render;
 ```
 
-# 3.) Copy the MakeFile, arch_pg_render--1.0, arch_pg_render.control
-```bash
-cp arch_pg _render--1.0, arch_pg_render.control
-```
+# 
 
 # Examples
 
