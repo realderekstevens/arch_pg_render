@@ -2,11 +2,8 @@
 
 Render engine extension for bare metal PostgreSQL.
 
-# Installation
-## Arch Linux w/ PostgreSQL 16
+# 0.) Installation YaY
 ```bash
-
-Install YaY
 pacman -Syu git
 sudo useradd -m -G wheel user
 sudo EDITOR=vim visudo
@@ -19,7 +16,8 @@ cd yay
 makepkg -si
 ```
 
-## Initalize the postgres database
+# 1.) Initalize the postgres database
+```bash
 1.) yay -Syu postgrest-bin postgresql
 2.) su postgres
 3.) initdb --locale=C.UTF-8 --encoding=UTF8 -D /var/lib/postgres/data --data-checksums
@@ -29,19 +27,17 @@ makepkg -si
 7.) vim /var/lib/postgres/.psql_history
 8.) :wq
 9.) chown postgres /var/lib/postgres/.psql_history
+'''
 
-
-
-
-
-# In PostgreSQL
+# 2.) enable the extension In PostgreSQL
+```bash
 create extension pg_render;
+'''
 
-
-# Copy the MakeFile
-
-# 
-
+# 3.) Copy the MakeFile, arch_pg_render--1.0, arch_pg_render.control
+```bash
+cp arch_pg _render--1.0, arch_pg_render.control
+'''
 # Examples
 
 ```sql
