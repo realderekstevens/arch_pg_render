@@ -2,21 +2,22 @@
 
 Render engine extension for bare metal PostgreSQL.
 
-## Installation
-
+# Installation
+## Arch Linux w/ PostgreSQL 16
 ```bash
-# Arch Linux w/ PostgreSQL 16
-## Install YaY
-### pacman -Syu git
-2.) sudo useradd -m -G wheel user
-3.) sudo EDITOR=vim visudo
-  Find the and uncomment wheel group without password line 108
-5.) passwd user
-  confirm password
-6.) su - user
-7.) git clone https://aur.archlinux.org/yay.git
-8.) cd yay
-9.) makepkg -si
+
+Install YaY
+pacman -Syu git
+sudo useradd -m -G wheel user
+sudo EDITOR=vim visudo
+Find the and uncomment wheel group without password line 108
+passwd user
+confirm password
+su - user
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+```
 
 ## Initalize the postgres database
 1.) yay -Syu postgrest-bin postgresql
@@ -29,13 +30,17 @@ Render engine extension for bare metal PostgreSQL.
 8.) :wq
 9.) chown postgres /var/lib/postgres/.psql_history
 
-## Copy the MakeFile
+
 
 
 
 # In PostgreSQL
 create extension pg_render;
-```
+
+
+# Copy the MakeFile
+
+# 
 
 # Examples
 
