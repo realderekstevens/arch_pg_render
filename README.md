@@ -2,7 +2,7 @@
 
 Render engine extension for bare metal PostgreSQL.
 
-# Installation
+## Installation
 
 ```bash
 # Arch Linux w/ PostgreSQL 16
