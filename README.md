@@ -29,7 +29,7 @@ chown postgres /var/lib/postgres/.psql_history
 ```
 
 # 2.) Copy the MakeFile, arch_pg_render--1.0, arch_pg_render.control
-```bash
+```
 yay -Syu git
 cd ~/home/user
 git clone https://github.com/realderekstevens/arch_pg_render
@@ -37,15 +37,14 @@ sudo cp arch_pg_render--1.0.sql /usr/share/postgresql/extension
 sudo cp arch_pg_render.control /usr/share/postgresql/extension
 ```
 
-# 3.) enable the extension In PostgreSQL
-```bash
+# 3.) Loadup your postgres
+```
 su - postgres
 psql
-create extension arch_pg_render;
 ```
 
 # Examples
-```sql
+```
 -- PostgreSQL extension
 create extension arch_pg_render;
 -- Serve /index using postgREST
@@ -67,9 +66,8 @@ select render(
 $$;
 ```
 
-# Another Example
-
-```html
+## Which should give you:
+```
 # HTTP GET /index
 <html>
   <head>
