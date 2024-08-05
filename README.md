@@ -174,7 +174,7 @@ Made with
 - [pgrx](https://github.com/pgcentralfoundation/pgrx) Rust extension framework for PostgreSQL
 
 # Sql.1
-
+'''sql
 -- PostgREST setup
 create extension arch_pg_render;
 create domain "text/html" as text;
@@ -285,9 +285,10 @@ returns "text/html" as $$
         )
     );
 $$ language sql;
+'''
 
 # SQL 2
-
+'''sql
 insert into templates (id, template) values
     ('layout', '
     <!DOCTYPE html>
@@ -427,8 +428,9 @@ insert into templates (id, template) values
     }
 ');
 '''
-# SQL.3
 
+# SQL.3
+'''sql
 insert into posts (title, content, image_url) values
 (
     'Render HTML in SQL with pg_render',
