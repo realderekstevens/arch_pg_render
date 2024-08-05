@@ -31,6 +31,8 @@ chown postgres /var/lib/postgres/.psql_history
 
 # 2.) Copy the MakeFile, arch_pg_render--1.0, arch_pg_render.control
 ```bash
+yay -Syu git
+git clone https://github.com/realderekstevens/arch_pg_render /usr/share/postgresql/extension/
 cp arch_pg _render--1.0 /usr/share/postgresql/extension/
 cp arch_pg_render.control /usr/share/postgresql/extension/
 su - postgres
