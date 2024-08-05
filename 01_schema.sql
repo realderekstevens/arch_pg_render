@@ -1,5 +1,5 @@
 -- PostgREST setup
-create extension pg_render;
+create extension arch_pg_render;
 create domain "text/html" as text;
 create role anon nologin;
 create role writer nologin;
