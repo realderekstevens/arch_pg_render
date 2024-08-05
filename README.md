@@ -1,5 +1,4 @@
 # arch_pg_render
-
 Render engine extension for bare metal PostgreSQL 15 on Arch Linux.
 
 # 0.) Install YaY
@@ -45,13 +44,10 @@ psql
 create extension arch_pg_render;
 ```
 
-# 
-
 # Examples
-
 ```sql
 -- PostgreSQL extension
-create extension pg_render;
+create extension arch_pg_render;
 -- Serve /index using postgREST
 create function api.index() returns "text/html" as $$
 -- Render HTML template with pg_render
@@ -317,15 +313,15 @@ insert into templates (id, template) values
     ('header', '
     <header>
         <h1><a href="/">pgrender.org</a></h1>
-        <h4>Example site running pg_render, PostgREST and HTMX</h4>
-        <code><a href="https://github.com/mkaski/pg_render_example">View source</a></code>
+        <h4>Example site running arch_pg_render, PostgREST and HTMX</h4>
+        <code><a href="https://github.com/mkaski/arch_pg_render_example">View source</a></code>
     </header>'
 );
 
 insert into templates (id, template) values
     ('footer', '
     <footer>
-        <small><a href="https://github.com/mkaski/pg_render">pg_render</a></small>
+        <small><a href="https://github.com/realdereksteverns/arch_pg_render">arch_pg_render</a></small>
     </footer>'
 );
 
