@@ -7,7 +7,7 @@ Render engine extension for bare metal PostgreSQL.
 ```bash
 # Arch Linux w/ PostgreSQL 16
 ## Install YaY
-1.) pacman -Syu git
+### pacman -Syu git
 2.) sudo useradd -m -G wheel user
 3.) sudo EDITOR=vim visudo
   Find the and uncomment wheel group without password line 108
