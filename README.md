@@ -42,14 +42,34 @@ $$;
 
 # Installation
 
-Download from [Releases](https://github.com/mkaski/pg_render/releases).
-
 ```bash
-# Ubuntu w/ PostgreSQL 15
-wget https://github.com/mkaski/pg_render/releases/download/v0.1.1/pg_render-v0.1.1-pg15-amd64-linux-gnu.deb \
-    && dpkg -i pg_render-v0.1.1-pg15-amd64-linux-gnu.deb \
-    && apt-get install -f \
-    && rm -rf pg_render-v0.1.1-pg15-amd64-linux-gnu.deb
+# Arch Linux w/ PostgreSQL 16
+## Install YaY
+1.) pacman -Syu git
+2.) sudo useradd -m -G wheel user
+3.) sudo EDITOR=vim visudo
+  Find the and uncomment wheel group without password line 108
+5.) passwd user
+  confirm password
+6.) su - user
+7.) git clone https://aur.archlinux.org/yay.git
+8.) cd yay
+9.) makepkg -si
+
+## Initalize the postgres database
+1.) yay -Syu postgrest-bin postgresql
+2.) su postgres
+3.) initdb --locale=C.UTF-8 --encoding=UTF8 -D /var/lib/postgres/data --data-checksums
+4.) exit
+5.) systemctl start postgresql
+6.) systemctl enable postgresql
+7.) vim /var/lib/postgres/.psql_history
+8.) :wq
+9.) chown postgres /var/lib/postgres/.psql_history
+
+## Copy the MakeFile
+
+
 
 # In PostgreSQL
 create extension pg_render;
