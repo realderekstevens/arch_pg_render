@@ -26,8 +26,7 @@ makepkg -si
 6.) systemctl enable postgresql
 7.) vim /var/lib/postgres/.psql_history
 8.) :wq
-9.) chown postgres /var/lib/postgres/.psql_history
-'''bash
+9.) chown postgres /var/lib/postgres/.psql_history '''
 
 # 2.) enable the extension In PostgreSQL
 ```bash
