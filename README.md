@@ -33,10 +33,8 @@ chown postgres /var/lib/postgres/.psql_history
 ```bash
 yay -Syu git
 git clone https://github.com/realderekstevens/arch_pg_render /usr/share/postgresql/extension/
-cp arch_pg _render--1.0 /usr/share/postgresql/extension/
-cp arch_pg_render.control /usr/share/postgresql/extension/
-su - postgres
-psql
+sudo cp arch_pg_render--1.0.sql /usr/share/postgresql/extension
+sudo cp arch_pg_render.control /usr/share/postgresql/extension
 ```
 
 # 3.) enable the extension In PostgreSQL
